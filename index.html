@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mano ❤️</title>
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #08070c;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+body::before {
+    content: "";file:///data/user/0/com.foxdebug.acodefree/files/public/Mano Birthday 🎂
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 72, 128, .13), transparent 28%),
+        radial-gradient(circle at 85% 70%, rgba(161, 88, 255, .12), transparent 30%);
+    z-index: -2;
+}
+
+.noise {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .035;
+    z-index: 100;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+/* ---------- INTRO ---------- */
+
+#intro {
+    position: fixed;
+    inset: 0;
+    background: #08070c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 50;
+    transition: opacity 1s ease, visibility 1s;
+}
+
+#intro.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.intro-content {
+    padding: 25px;
+}
+
+.intro-small {
+    color: #aaa;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+.intro-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 13vw, 100px);
+    line-height: .95;
+}
+
+.intro-title span {
+    color: #ff719d;
+}
+
+.intro-text {
+    color: #aaa;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.enter-btn {
+    margin-top: 35px;
+    border: 1px solid rgba(255,255,255,.25);
+    background: rgba(255,255,255,.06);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.enter-btn:hover {
+    background: white;
+    color: #111;
+}
+
+/* ---------- NAV ---------- */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    background: linear-gradient(to bottom, rgba(8,7,12,.8), transparent);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.logo span {
+    color: #ff719d;
+}
+
+.music {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.25);
+    background: rgba(255,255,255,.07);
+    color: white;
+    cursor: pointer;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 8% 80px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    color: #ff719d;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(60px, 12vw, 145px);
+    line-height: .82;
+    font-weight: 600;
+}
+
+.hero h1 span {
+    color: #ff719d;
+}
+
+.hero-sub {
+    max-width: 570px;
+    margin-top: 35px;
+    color: #aaa;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 35px;
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ---------- SECTIONS ---------- */
+
+section.content {
+    padding: 120px 8%;
+}
+
+.section-label {
+    color: #ff719d;
+    letter-spacing: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 7vw, 75px);
+    max-width: 750px;
+    line-height: 1.05;
+}
+
+.section-text {
+    color: #aaa;
+    line-height: 1.9;
+    max-width: 650px;
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+/* ---------- PHOTO GRID ---------- */
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 55px;
+}
+
+.photo {
+    min-height: 300px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    background:
+        linear-gradient(135deg, #291521, #17121d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.photo:first-child {
+    min-height: 450px;
+    grid-row: span 2;
+}
+
+.photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.7), transparent 60%);
+}
+
+.photo-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    color: rgba(255,255,255,.08);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    z-index: 2;
+    font-size: 13px;
+    color: #ddd;
+}
+
+/* ---------- LETTER ---------- */
+
+.letter {
+    margin-top: 55px;
+    max-width: 800px;
+    padding: 50px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 22px;
+    background: rgba(255,255,255,.035);
+}
+
+.letter p {
+    color: #c8c8c8;
+    font-size: 17px;
+    line-height: 2;
+    margin-bottom: 22px;
+}
+
+.letter .dear {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+}
+
+.signature {
+    font-family: 'Playfair Display', serif;
+    color: #ff719d !important;
+    font-size: 25px !important;
+}
+
+/* ---------- FINAL ---------- */
+
+.final {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 25px;
+}
+
+.final-inner {
+    max-width: 850px;
+}
+
+.final h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 10vw, 100px);
+    line-height: .95;
+}
+
+.final h2 span {
+    color: #ff719d;
+}
+
+.final p {
+    color: #aaa;
+    max-width: 550px;
+    margin: 30px auto;
+    line-height: 1.8;
+}
+
+.heart-button {
+    background: #ff719d;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 10px 40px rgba(255,113,157,.25);
+}
+
+/* ---------- SURPRISE ---------- */
+
+#surprise {
+    position: fixed;
+    inset: 0;
+    background: rgba(8,7,12,.97);
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .7s;
+}
+
+#surprise.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.surprise-box {
+    max-width: 700px;
+}
+
+.surprise-box .emoji {
+    font-size: 70px;
+}
+
+.surprise-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 10vw, 90px);
+    margin: 20px 0;
+}
+
+.surprise-box h2 span {
+    color: #ff719d;
+}
+
+.surprise-box p {
+    color: #aaa;
+    line-height: 1.8;
+}
+
+/* ---------- PARTICLES ---------- */
+
+.particle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ff719d;
+    pointer-events: none;
+    animation: float 6s linear forwards;
+    opacity: .6;
+    z-index: -1;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .7;
+    }
+
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+@media(max-width:650px) {
+
+    .hero {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    section.content {
+        padding: 90px 7%;
+    }
+
+    .photos {
+        grid-template-columns: 1fr;
+    }
+
+    .photo:first-child {
+        grid-row: auto;
+        min-height: 350px;
+    }
+
+    .photo {
+        min-height: 250px;
+    }
+
+    .letter {
+        padding: 30px 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="noise"></div>
+
+
+<!-- INTRO -->
+
+<div id="intro">
+
+    <div class="intro-content">
+
+        <div class="intro-small">
+            A little something from Umar
+        </div>
+
+        <div class="intro-title">
+            For <span>Mano</span>
+        </div>
+
+        <p class="intro-text">
+            This isn't just a birthday wish...
+            <br>
+            it's a little memory made for you.
+        </p>
+
+        <button class="enter-btn" onclick="enterSite()">
+            Open your surprise →
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        For <span>Mano</span> ♥
+    </div>
+
+    <button class="music" onclick="toggleMusic()" id="musicBtn">
+        ♫
+    </button>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            16 August • A special day
+        </div>
+
+        <h1>
+            Happy<br>
+            <span>Birthday,</span><br>
+            Mano.
+        </h1>
+
+        <p class="hero-sub">
+            Some people make ordinary moments feel special.
+            You're one of those people. So today deserves
+            something a little more special too. ❤️
+        </p>
+
+    </div>
+
+    <div class="scroll">
+        ↓ Scroll slowly
+    </div>
+
+</header>
+
+
+<!-- MEMORIES -->
+
+<section class="content">
+
+    <div class="section-label">
+        Little memories
+    </div>
+
+    <h2 class="section-title">
+        Every good memory deserves a place.
+    </h2>
+
+    <p class="section-text">
+        This space is for the moments that make you smile —
+        the random conversations, the jokes, the crazy moments,
+        and all those little things that somehow become
+        unforgettable.
+    </p>
+
+
+    <div class="photos">
+
+        <div class="photo">
+            <div class="photo-number">01</div>
+            <div class="photo-caption">
+                One beautiful memory
+            </div>
+        </div>
+
+        <div class="photo">
+            <div class="photo-number">02</div>
+            <div class="photo-caption">
+                Another little moment
+            </div>
+        </div>
+
+        <div class="photo">
+            <div class="photo-number">03</div>
+            <div class="photo-caption">
+                A memory worth keeping
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LETTER -->
+
+<section class="content">
+
+    <div class="section-label">
+        A letter for you
+    </div>
+
+    <h2 class="section-title">
+        Dear Mano,
+    </h2>
+
+
+    <div class="letter">
+
+        <p class="dear">
+            Hey Mano ❤️
+        </p>
+
+        <p>
+            Today is your day, and I just wanted to take
+            a moment to say something that doesn't always
+            get said in everyday conversations.
+        </p>
+
+        <p>
+            I'm genuinely happy that you're part of my life.
+            Being cousins is one thing, but having someone
+            you can laugh with, annoy, talk to and share
+            random moments with makes it even better.
+        </p>
+
+        <p>
+            I hope this year gives you more reasons to smile,
+            more opportunities to grow, and more moments
+            that you'll remember for years.
+        </p>
+
+        <p>
+            Never forget how special you are.
+            Keep being yourself, keep dreaming big,
+            and keep that beautiful smile.
+        </p>
+
+        <p>
+            And whenever life gets difficult,
+            remember that better days are always waiting
+            somewhere ahead.
+        </p>
+
+        <p class="signature">
+            — Umar ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <div class="final-inner">
+
+        <div class="section-label">
+            One last thing
+        </div>
+
+        <h2>
+            Here's to<br>
+            <span>your next chapter.</span>
+        </h2>
+
+        <p>
+            New memories. New adventures. New reasons to smile.
+            May your year be beautiful in ways you haven't
+            even imagined yet.
+        </p>
+
+        <button class="heart-button" onclick="showSurprise()">
+            ♥ One last surprise
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL SURPRISE -->
+
+<div id="surprise">
+
+    <div class="surprise-box">
+
+        <div class="emoji">
+            🎂
+        </div>
+
+        <h2>
+            Happy Birthday,<br>
+            <span>Muskan.</span>
+        </h2>
+
+        <p>
+            Mano, I hope you smiled at least once while
+            going through this little website. 😄
+            <br><br>
+            You deserve a day full of happiness,
+            laughter and love.
+            <br><br>
+            Stay amazing. ❤️
+        </p>
+
+        <br>
+
+        <button class="heart-button" onclick="closeSurprise()">
+            Back to the memories
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ==========================
+   INTRO
+========================== */
+
+function enterSite() {
+
+    document
+        .getElementById("intro")
+        .classList.add("hide");
+
+    createParticles();
+
+}
+
+
+/* ==========================
+   FINAL SURPRISE
+========================== */
+
+function showSurprise() {
+
+    document
+        .getElementById("surprise")
+        .classList.add("show");
+
+    createParticles();
+
+}
+
+
+function closeSurprise() {
+
+    document
+        .getElementById("surprise")
+        .classList.remove("show");
+
+}
+
+
+/* ==========================
+   FLOATING PARTICLES
+========================== */
+
+function createParticles() {
+
+    setInterval(() => {
+
+        const particle =
+            document.createElement("div");
+
+        particle.className = "particle";
+
+        particle.style.left =
+            Math.random() * 100 + "vw";
+
+        particle.style.top =
+            (80 + Math.random() * 20) + "vh";
+
+        particle.style.animationDuration =
+            (4 + Math.random() * 5) + "s";
+
+        document.body.appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, 9000);
+
+    }, 500);
+
+}
+
+
+/* ==========================
+   MUSIC BUTTON
+========================== */
+
+let audioContext = null;
+let musicPlaying = false;
+let oscillator = null;
+
+function toggleMusic() {
+
+    const button =
+        document.getElementById("musicBtn");
+
+    if (!audioContext) {
+
+        audioContext =
+            new (
+                window.AudioContext ||
+                window.webkitAudioContext
+            )();
+
+    }
+
+
+    if (!musicPlaying) {
+
+        playNote(261.63, 0);
+        playNote(329.63, .4);
+        playNote(392.00, .8);
+        playNote(523.25, 1.2);
+
+        button.innerHTML = "♫";
+
+        musicPlaying = true;
+
+        setTimeout(() => {
+            musicPlaying = false;
+        }, 1800);
+
+    } else {
+
+        musicPlaying = false;
+
+    }
+
+}
+
+
+function playNote(frequency, delay) {
+
+    setTimeout(() => {
+
+        const osc =
+            audioContext.createOscillator();
+
+        const gain =
+            audioContext.createGain();
+
+        osc.frequency.value =
+            frequency;
+
+        osc.type = "sine";
+
+        gain.gain.setValueAtTime(
+            0.0001,
+            audioContext.currentTime
+        );
+
+        gain.gain.exponentialRampToValueAtTime(
+            0.08,
+            audioContext.currentTime + .05
+        );
+
+        gain.gain.exponentialRampToValueAtTime(
+            0.0001,
+            audioContext.currentTime + .8
+        );
+
+        osc.connect(gain);
+
+        gain.connect(
+            audioContext.destination
+        );
+
+        osc.start();
+
+        osc.stop(
+            audioContext.currentTime + .8
+        );
+
+    }, delay * 1000);
+
+}
+
+
+/* ==========================
+   START PARTICLES
+========================== */
+
+createParticles();
+
+</script>
+
+</html>
+</body>
