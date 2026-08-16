@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Mano ❤️</title>
-  
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -19,129 +19,45 @@ html {
 }
 
 body {
-    background: #08070c;
-    color: #fff;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
+    background: #08070b;
+    color: white;
     overflow-x: hidden;
 }
 
 /* ---------- BACKGROUND ---------- */
 
 body::before {
-    content: "";file:///data/user/0/com.foxdebug.acodefree/files/public/Mano Birthday 🎂
+    content: "";
     position: fixed;
     inset: 0;
-    pointer-events: none;
     background:
-        radial-gradient(circle at 15% 20%, rgba(255, 72, 128, .13), transparent 28%),
-        radial-gradient(circle at 85% 70%, rgba(161, 88, 255, .12), transparent 30%);
+        radial-gradient(circle at 20% 20%, rgba(255, 100, 150, .12), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(180, 100, 255, .10), transparent 30%);
+    pointer-events: none;
     z-index: -2;
 }
 
-.noise {
+.stars {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    opacity: .035;
-    z-index: 100;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+    z-index: -1;
 }
 
-/* ---------- INTRO ---------- */
-
-#intro {
-    position: fixed;
-    inset: 0;
-    background: #08070c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 50;
-    transition: opacity 1s ease, visibility 1s;
-}
-
-#intro.hide {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.intro-content {
-    padding: 25px;
-}
-
-.intro-small {
-    color: #aaa;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-size: 11px;
-    margin-bottom: 25px;
-}
-
-.intro-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(48px, 13vw, 100px);
-    line-height: .95;
-}
-
-.intro-title span {
-    color: #ff719d;
-}
-
-.intro-text {
-    color: #aaa;
-    margin-top: 25px;
-    font-size: 15px;
-}
-
-.enter-btn {
-    margin-top: 35px;
-    border: 1px solid rgba(255,255,255,.25);
-    background: rgba(255,255,255,.06);
-    color: white;
-    padding: 14px 28px;
-    border-radius: 100px;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.enter-btn:hover {
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
     background: white;
-    color: #111;
-}
-
-/* ---------- NAV ---------- */
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 22px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 20;
-    background: linear-gradient(to bottom, rgba(8,7,12,.8), transparent);
-}
-
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-}
-
-.logo span {
-    color: #ff719d;
-}
-
-.music {
-    width: 42px;
-    height: 42px;
     border-radius: 50%;
-    border: 1px solid rgba(255,255,255,.25);
-    background: rgba(255,255,255,.07);
-    color: white;
-    cursor: pointer;
+    opacity: .5;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%,100% { opacity: .15; transform: scale(.7); }
+    50% { opacity: .8; transform: scale(1.3); }
 }
 
 /* ---------- HERO ---------- */
@@ -150,7 +66,9 @@ nav {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 120px 8% 80px;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
     position: relative;
 }
 
@@ -158,69 +76,137 @@ nav {
     max-width: 850px;
 }
 
-.eyebrow {
-    color: #ff719d;
+.small-label {
+    color: #ff9bb8;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 700;
     margin-bottom: 25px;
 }
 
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(60px, 12vw, 145px);
-    line-height: .82;
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(60px, 14vw, 145px);
+    line-height: .9;
     font-weight: 600;
+    background: linear-gradient(135deg, #fff, #ffb5cb, #d99aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.hero h1 span {
-    color: #ff719d;
-}
-
-.hero-sub {
-    max-width: 570px;
-    margin-top: 35px;
-    color: #aaa;
+.hero-subtitle {
+    margin-top: 28px;
+    color: #b8b2bd;
     font-size: 17px;
-    line-height: 1.8;
+    line-height: 1.7;
+}
+
+.hero-subtitle span {
+    color: #ff9fbd;
+}
+
+.open-button {
+    margin-top: 40px;
+    padding: 16px 30px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(255,255,255,.07);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s;
+    backdrop-filter: blur(10px);
+}
+
+.open-button:hover {
+    transform: translateY(-4px);
+    background: rgba(255,130,170,.18);
+    border-color: rgba(255,150,180,.5);
 }
 
 .scroll {
     position: absolute;
-    bottom: 35px;
-    color: #777;
+    bottom: 30px;
+    color: #77727d;
     font-size: 11px;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
 
-/* ---------- SECTIONS ---------- */
+/* ---------- MAIN ---------- */
 
-section.content {
-    padding: 120px 8%;
+main {
+    max-width: 1050px;
+    margin: auto;
+    padding: 80px 22px;
+}
+
+.section {
+    margin-bottom: 130px;
 }
 
 .section-label {
-    color: #ff719d;
-    letter-spacing: 4px;
-    font-size: 11px;
+    color: #ff91b3;
     text-transform: uppercase;
-    margin-bottom: 18px;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(38px, 7vw, 75px);
-    max-width: 750px;
-    line-height: 1.05;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 7vw, 65px);
+    font-weight: 600;
 }
 
 .section-text {
-    color: #aaa;
+    color: #aaa4ae;
     line-height: 1.9;
-    max-width: 650px;
+    max-width: 700px;
     margin-top: 25px;
     font-size: 16px;
+}
+
+/* ---------- LETTER ---------- */
+
+.letter {
+    margin-top: 50px;
+    padding: 45px;
+    border-radius: 25px;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+    border: 1px solid rgba(255,255,255,.09);
+    position: relative;
+    overflow: hidden;
+}
+
+.letter::before {
+    content: "♥";
+    position: absolute;
+    right: -20px;
+    top: -50px;
+    font-size: 220px;
+    color: rgba(255,120,160,.035);
+}
+
+.letter p {
+    color: #c4bec8;
+    line-height: 2;
+    font-size: 16px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.signature {
+    margin-top: 30px;
+    color: #ff9fbd;
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
 }
 
 /* ---------- PHOTO GRID ---------- */
@@ -228,224 +214,202 @@ section.content {
 .photos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-top: 55px;
+    gap: 18px;
+    margin-top: 50px;
 }
 
 .photo {
-    min-height: 300px;
-    border-radius: 18px;
+    height: 440px;
+    border-radius: 22px;
     overflow: hidden;
     position: relative;
-    background:
-        linear-gradient(135deg, #291521, #17121d);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #151219;
     border: 1px solid rgba(255,255,255,.08);
 }
 
-.photo:first-child {
-    min-height: 450px;
-    grid-row: span 2;
+.photo:nth-child(2),
+.photo:nth-child(3) {
+    height: 320px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    transition: transform .8s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.06);
 }
 
 .photo::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,.7), transparent 60%);
-}
-
-.photo-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 70px;
-    color: rgba(255,255,255,.08);
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.8),
+        rgba(0,0,0,.05) 70%
+    );
 }
 
 .photo-caption {
     position: absolute;
+    left: 25px;
     bottom: 22px;
-    left: 22px;
     z-index: 2;
-    font-size: 13px;
-    color: #ddd;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
 }
 
-/* ---------- LETTER ---------- */
+/* ---------- WISHES ---------- */
 
-.letter {
-    margin-top: 55px;
-    max-width: 800px;
-    padding: 50px;
-    border: 1px solid rgba(255,255,255,.1);
-    border-radius: 22px;
-    background: rgba(255,255,255,.035);
+.wishes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 45px;
 }
 
-.letter p {
-    color: #c8c8c8;
-    font-size: 17px;
-    line-height: 2;
-    margin-bottom: 22px;
+.wish {
+    padding: 30px 24px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.045);
+    border: 1px solid rgba(255,255,255,.07);
+    transition: .3s;
 }
 
-.letter .dear {
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 27px;
+.wish:hover {
+    transform: translateY(-7px);
+    background: rgba(255,255,255,.07);
 }
 
-.signature {
-    font-family: 'Playfair Display', serif;
-    color: #ff719d !important;
-    font-size: 25px !important;
+.wish-number {
+    color: #ff8eaf;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.wish h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.wish p {
+    color: #99939d;
+    line-height: 1.7;
+    font-size: 14px;
 }
 
 /* ---------- FINAL ---------- */
 
 .final {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 100px 25px;
+    padding: 120px 20px;
+    border-top: 1px solid rgba(255,255,255,.07);
 }
 
-.final-inner {
-    max-width: 850px;
+.final-heart {
+    font-size: 45px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    15% { transform: scale(1.15); }
+    30% { transform: scale(1); }
 }
 
 .final h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(48px, 10vw, 100px);
-    line-height: .95;
-}
-
-.final h2 span {
-    color: #ff719d;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 8vw, 75px);
+    margin-top: 20px;
 }
 
 .final p {
-    color: #aaa;
-    max-width: 550px;
-    margin: 30px auto;
-    line-height: 1.8;
+    color: #99939d;
+    margin-top: 20px;
 }
 
-.heart-button {
-    background: #ff719d;
-    color: white;
-    border: none;
-    padding: 16px 32px;
-    border-radius: 100px;
-    font-size: 15px;
-    cursor: pointer;
-    box-shadow: 0 10px 40px rgba(255,113,157,.25);
+.from {
+    margin-top: 40px;
+    color: #ff9db9;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
 }
 
-/* ---------- SURPRISE ---------- */
+/* ---------- MUSIC BUTTON ---------- */
 
-#surprise {
+.music {
     position: fixed;
-    inset: 0;
-    background: rgba(8,7,12,.97);
-    z-index: 40;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 25px;
-    opacity: 0;
-    visibility: hidden;
-    transition: .7s;
-}
-
-#surprise.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.surprise-box {
-    max-width: 700px;
-}
-
-.surprise-box .emoji {
-    font-size: 70px;
-}
-
-.surprise-box h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(45px, 10vw, 90px);
-    margin: 20px 0;
-}
-
-.surprise-box h2 span {
-    color: #ff719d;
-}
-
-.surprise-box p {
-    color: #aaa;
-    line-height: 1.8;
-}
-
-/* ---------- PARTICLES ---------- */
-
-.particle {
-    position: fixed;
-    width: 4px;
-    height: 4px;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background: #ff719d;
+    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(20,18,25,.85);
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+/* ---------- CONFETTI ---------- */
+
+.confetti {
+    position: fixed;
+    width: 8px;
+    height: 13px;
+    top: -20px;
+    z-index: 100;
     pointer-events: none;
-    animation: float 6s linear forwards;
-    opacity: .6;
-    z-index: -1;
+    animation: fall 4s linear forwards;
 }
 
-@keyframes float {
-    from {
-        transform: translateY(0);
-        opacity: 0;
-    }
-
-    20% {
-        opacity: .7;
-    }
-
+@keyframes fall {
     to {
-        transform: translateY(-110vh);
-        opacity: 0;
+        transform: translateY(110vh) rotate(720deg);
     }
 }
 
-@media(max-width:650px) {
+/* ---------- MOBILE ---------- */
 
-    .hero {
-        padding-left: 7%;
-        padding-right: 7%;
+@media(max-width: 700px) {
+
+    main {
+        padding: 60px 18px;
     }
 
-    section.content {
-        padding: 90px 7%;
+    .section {
+        margin-bottom: 90px;
+    }
+
+    .letter {
+        padding: 28px 22px;
     }
 
     .photos {
         grid-template-columns: 1fr;
     }
 
-    .photo:first-child {
-        grid-row: auto;
-        min-height: 350px;
+    .photo,
+    .photo:nth-child(2),
+    .photo:nth-child(3) {
+        height: 430px;
     }
 
-    .photo {
-        min-height: 250px;
+    .wishes {
+        grid-template-columns: 1fr;
     }
 
-    .letter {
-        padding: 30px 22px;
+    .hero-subtitle {
+        font-size: 15px;
     }
 }
 </style>
@@ -453,433 +417,394 @@ section.content {
 
 <body>
 
-<div class="noise"></div>
-
-
-<!-- INTRO -->
-
-<div id="intro">
-
-    <div class="intro-content">
-
-        <div class="intro-small">
-            A little something from Umar
-        </div>
-
-        <div class="intro-title">
-            For <span>Mano</span>
-        </div>
-
-        <p class="intro-text">
-            This isn't just a birthday wish...
-            <br>
-            it's a little memory made for you.
-        </p>
-
-        <button class="enter-btn" onclick="enterSite()">
-            Open your surprise →
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- NAVIGATION -->
-
-<nav>
-
-    <div class="logo">
-        For <span>Mano</span> ♥
-    </div>
-
-    <button class="music" onclick="toggleMusic()" id="musicBtn">
-        ♫
-    </button>
-
-</nav>
-
+<!-- Stars -->
+<div class="stars" id="stars"></div>
 
 <!-- HERO -->
-
-<header class="hero">
+<section class="hero">
 
     <div class="hero-content">
 
-        <div class="eyebrow">
-            16 August • A special day
+        <div class="small-label">
+            A little surprise for
         </div>
 
-        <h1>
-            Happy<br>
-            <span>Birthday,</span><br>
-            Mano.
-        </h1>
+        <h1>Mano</h1>
 
-        <p class="hero-sub">
-            Some people make ordinary moments feel special.
-            You're one of those people. So today deserves
-            something a little more special too. ❤️
+        <p class="hero-subtitle">
+            For the person who deserves a little extra happiness today. 
+            <span>Happy Birthday ❤️</span>
         </p>
+
+        <button class="open-button" onclick="startSurprise()">
+            Open your surprise ✨
+        </button>
 
     </div>
 
     <div class="scroll">
-        ↓ Scroll slowly
-    </div>
-
-</header>
-
-
-<!-- MEMORIES -->
-
-<section class="content">
-
-    <div class="section-label">
-        Little memories
-    </div>
-
-    <h2 class="section-title">
-        Every good memory deserves a place.
-    </h2>
-
-    <p class="section-text">
-        This space is for the moments that make you smile —
-        the random conversations, the jokes, the crazy moments,
-        and all those little things that somehow become
-        unforgettable.
-    </p>
-
-
-    <div class="photos">
-
-        <div class="photo">
-            <div class="photo-number">01</div>
-            <div class="photo-caption">
-                One beautiful memory
-            </div>
-        </div>
-
-        <div class="photo">
-            <div class="photo-number">02</div>
-            <div class="photo-caption">
-                Another little moment
-            </div>
-        </div>
-
-        <div class="photo">
-            <div class="photo-number">03</div>
-            <div class="photo-caption">
-                A memory worth keeping
-            </div>
-        </div>
-
+        ↓ scroll slowly
     </div>
 
 </section>
 
 
-<!-- LETTER -->
+<main>
 
-<section class="content">
-
-    <div class="section-label">
-        A letter for you
-    </div>
-
-    <h2 class="section-title">
-        Dear Mano,
-    </h2>
-
-
-    <div class="letter">
-
-        <p class="dear">
-            Hey Mano ❤️
-        </p>
-
-        <p>
-            Today is your day, and I just wanted to take
-            a moment to say something that doesn't always
-            get said in everyday conversations.
-        </p>
-
-        <p>
-            I'm genuinely happy that you're part of my life.
-            Being cousins is one thing, but having someone
-            you can laugh with, annoy, talk to and share
-            random moments with makes it even better.
-        </p>
-
-        <p>
-            I hope this year gives you more reasons to smile,
-            more opportunities to grow, and more moments
-            that you'll remember for years.
-        </p>
-
-        <p>
-            Never forget how special you are.
-            Keep being yourself, keep dreaming big,
-            and keep that beautiful smile.
-        </p>
-
-        <p>
-            And whenever life gets difficult,
-            remember that better days are always waiting
-            somewhere ahead.
-        </p>
-
-        <p class="signature">
-            — Umar ❤️
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- FINAL -->
-
-<section class="final">
-
-    <div class="final-inner">
+    <!-- LETTER -->
+    <section class="section">
 
         <div class="section-label">
-            One last thing
+            A little message
+        </div>
+
+        <h2 class="section-title">
+            Dear Mano,
+        </h2>
+
+        <p class="section-text">
+            Some people make ordinary moments feel a little more special.
+            You're one of those people.
+        </p>
+
+        <div class="letter">
+
+            <p>
+                Today isn't just another day. It's the day someone
+                genuinely special came into this world.
+            </p>
+
+            <p>
+                I hope this new year of your life brings you beautiful
+                memories, peaceful moments, lots of laughter and all the
+                happiness you deserve.
+            </p>
+
+            <p>
+                Keep smiling, keep being yourself, and never forget how
+                wonderful you are.
+            </p>
+
+            <p>
+                And yes... this little website took some effort 😂
+                So you better appreciate it!
+            </p>
+
+            <div class="signature">
+                — Umar ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHOTOS -->
+    <section class="section">
+
+        <div class="section-label">
+            Little memories
+        </div>
+
+        <h2 class="section-title">
+            Some moments of you ✨
+        </h2>
+
+        <p class="section-text">
+            Three pictures, three little moments, and one very special
+            person.
+        </p>
+
+        <div class="photos">
+
+            <div class="photo">
+                <img src="mano1.jpg" alt="Mano">
+                <div class="photo-caption">
+                    Simply beautiful ❤️
+                </div>
+            </div>
+
+            <div class="photo">
+                <img src="mano2.jpg" alt="Mano">
+                <div class="photo-caption">
+                    A beautiful moment ✨
+                </div>
+            </div>
+
+            <div class="photo">
+                <img src="mano3.jpg" alt="Mano">
+                <div class="photo-caption">
+                    Always smiling ❤️
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WISHES -->
+    <section class="section">
+
+        <div class="section-label">
+            Birthday wishes
+        </div>
+
+        <h2 class="section-title">
+            Things I wish for you
+        </h2>
+
+        <div class="wishes">
+
+            <div class="wish">
+
+                <div class="wish-number">
+                    01
+                </div>
+
+                <h3>Happiness</h3>
+
+                <p>
+                    May you always have reasons to smile and people around
+                    you who make your heart happy.
+                </p>
+
+            </div>
+
+
+            <div class="wish">
+
+                <div class="wish-number">
+                    02
+                </div>
+
+                <h3>Success</h3>
+
+                <p>
+                    May every dream you're working toward slowly become
+                    something real.
+                </p>
+
+            </div>
+
+
+            <div class="wish">
+
+                <div class="wish-number">
+                    03
+                </div>
+
+                <h3>Beautiful Memories</h3>
+
+                <p>
+                    May this year give you countless moments that you'll
+                    remember with a smile.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="final">
+
+        <div class="final-heart">
+            ❤️
         </div>
 
         <h2>
-            Here's to<br>
-            <span>your next chapter.</span>
+            Happy Birthday,
+            <br>
+            Mano!
         </h2>
 
         <p>
-            New memories. New adventures. New reasons to smile.
-            May your year be beautiful in ways you haven't
-            even imagined yet.
+            May your day be as beautiful as your smile.
         </p>
 
-        <button class="heart-button" onclick="showSurprise()">
-            ♥ One last surprise
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- FINAL SURPRISE -->
-
-<div id="surprise">
-
-    <div class="surprise-box">
-
-        <div class="emoji">
-            🎂
+        <div class="from">
+            With love, Umar
         </div>
 
-        <h2>
-            Happy Birthday,<br>
-            <span>Muskan.</span>
-        </h2>
+    </section>
 
-        <p>
-            Mano, I hope you smiled at least once while
-            going through this little website. 😄
-            <br><br>
-            You deserve a day full of happiness,
-            laughter and love.
-            <br><br>
-            Stay amazing. ❤️
-        </p>
+</main>
 
-        <br>
 
-        <button class="heart-button" onclick="closeSurprise()">
-            Back to the memories
-        </button>
-
-    </div>
-
-</div>
+<!-- MUSIC BUTTON -->
+<button class="music" onclick="toggleMusic()" id="musicBtn">
+    ♪
+</button>
 
 
 <script>
 
-/* ==========================
-   INTRO
-========================== */
+/* ---------- CREATE STARS ---------- */
 
-function enterSite() {
+const stars = document.getElementById("stars");
 
-    document
-        .getElementById("intro")
-        .classList.add("hide");
+for(let i = 0; i < 80; i++) {
 
-    createParticles();
+    const star = document.createElement("div");
 
+    star.className = "star";
+
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+
+    star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+    stars.appendChild(star);
 }
 
 
-/* ==========================
-   FINAL SURPRISE
-========================== */
+/* ---------- SURPRISE ---------- */
 
-function showSurprise() {
+function startSurprise() {
 
-    document
-        .getElementById("surprise")
-        .classList.add("show");
+    document.querySelector(".hero").scrollIntoView({
+        behavior: "smooth"
+    });
 
-    createParticles();
-
-}
-
-
-function closeSurprise() {
-
-    document
-        .getElementById("surprise")
-        .classList.remove("show");
-
-}
-
-
-/* ==========================
-   FLOATING PARTICLES
-========================== */
-
-function createParticles() {
-
-    setInterval(() => {
-
-        const particle =
-            document.createElement("div");
-
-        particle.className = "particle";
-
-        particle.style.left =
-            Math.random() * 100 + "vw";
-
-        particle.style.top =
-            (80 + Math.random() * 20) + "vh";
-
-        particle.style.animationDuration =
-            (4 + Math.random() * 5) + "s";
-
-        document.body.appendChild(particle);
-
-        setTimeout(() => {
-            particle.remove();
-        }, 9000);
-
-    }, 500);
-
-}
-
-
-/* ==========================
-   MUSIC BUTTON
-========================== */
-
-let audioContext = null;
-let musicPlaying = false;
-let oscillator = null;
-
-function toggleMusic() {
-
-    const button =
-        document.getElementById("musicBtn");
-
-    if (!audioContext) {
-
-        audioContext =
-            new (
-                window.AudioContext ||
-                window.webkitAudioContext
-            )();
-
-    }
-
-
-    if (!musicPlaying) {
-
-        playNote(261.63, 0);
-        playNote(329.63, .4);
-        playNote(392.00, .8);
-        playNote(523.25, 1.2);
-
-        button.innerHTML = "♫";
-
-        musicPlaying = true;
-
-        setTimeout(() => {
-            musicPlaying = false;
-        }, 1800);
-
-    } else {
-
-        musicPlaying = false;
-
-    }
-
-}
-
-
-function playNote(frequency, delay) {
+    createConfetti();
 
     setTimeout(() => {
 
-        const osc =
-            audioContext.createOscillator();
+        document.querySelector("main").scrollIntoView({
+            behavior: "smooth"
+        });
 
-        const gain =
-            audioContext.createGain();
-
-        osc.frequency.value =
-            frequency;
-
-        osc.type = "sine";
-
-        gain.gain.setValueAtTime(
-            0.0001,
-            audioContext.currentTime
-        );
-
-        gain.gain.exponentialRampToValueAtTime(
-            0.08,
-            audioContext.currentTime + .05
-        );
-
-        gain.gain.exponentialRampToValueAtTime(
-            0.0001,
-            audioContext.currentTime + .8
-        );
-
-        osc.connect(gain);
-
-        gain.connect(
-            audioContext.destination
-        );
-
-        osc.start();
-
-        osc.stop(
-            audioContext.currentTime + .8
-        );
-
-    }, delay * 1000);
-
+    }, 1000);
 }
 
 
-/* ==========================
-   START PARTICLES
-========================== */
+/* ---------- CONFETTI ---------- */
 
-createParticles();
+function createConfetti() {
+
+    const symbols = [
+        "❤️",
+        "✨",
+        "🎉",
+        "💕",
+        "🌸",
+        "⭐"
+    ];
+
+    for(let i = 0; i < 50; i++) {
+
+        const piece = document.createElement("div");
+
+        piece.className = "confetti";
+
+        piece.innerText =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+        piece.style.left =
+            Math.random() * 100 + "vw";
+
+        piece.style.fontSize =
+            (12 + Math.random() * 18) + "px";
+
+        piece.style.animationDuration =
+            (3 + Math.random() * 3) + "s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 6500);
+    }
+}
+
+
+/* ---------- MUSIC ---------- */
+
+let audio;
+let playing = false;
+
+function toggleMusic() {
+
+    if(!audio) {
+
+        audio = new Audio();
+
+        /*
+         * You can add your own music later by replacing
+         * the empty string with a music file:
+         *
+         * audio.src = "music.mp3";
+         */
+
+        alert(
+            "Add a music.mp3 file to your GitHub repository if you want background music 🎵"
+        );
+
+        return;
+    }
+
+    if(playing) {
+
+        audio.pause();
+        playing = false;
+
+    } else {
+
+        audio.play();
+        playing = true;
+
+    }
+}
+
+
+/* ---------- LITTLE CLICK EFFECT ---------- */
+
+document.addEventListener("click", function(e) {
+
+    if(e.target.tagName === "BUTTON") return;
+
+    const heart = document.createElement("div");
+
+    heart.innerText = "♥";
+
+    heart.style.position = "fixed";
+    heart.style.left = e.clientX + "px";
+    heart.style.top = e.clientY + "px";
+    heart.style.color = "#ff8faf";
+    heart.style.fontSize = "20px";
+    heart.style.pointerEvents = "none";
+    heart.style.zIndex = "999";
+
+    document.body.appendChild(heart);
+
+    heart.animate(
+        [
+            {
+                transform: "translateY(0) scale(1)",
+                opacity: 1
+            },
+            {
+                transform: "translateY(-60px) scale(1.5)",
+                opacity: 0
+            }
+        ],
+        {
+            duration: 800,
+            easing: "ease-out"
+        }
+    );
+
+    setTimeout(() => {
+        heart.remove();
+    }, 800);
+
+});
 
 </script>
 
-</html>
 </body>
+  </html>
